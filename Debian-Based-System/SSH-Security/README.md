@@ -1,10 +1,11 @@
 # Debian-Based System
 
-## Introduction
-This is a tutorial for Linux Debian System Hardening. It showcases Auditing and Hardening your system in compliance with
-the CIS Benchmark.
+### 1.0 Setting No Root Login Over SSH
+Edit `/etc/ssh/sshd_config` and set `PermitRootLogin no`.
+By doing this, you are preventing unathorized access to your system from the root account and 
+minimizing the risk of malicious attacks.
 
-### 1.0 Allowing Secure Shell From our System  
+### 2.0 Allowing Secure Shell From our System  
 We will be using `ufw` firewall to allow access to our system. The following command denying all incoming 
 connections, allowing all outgoing connections, and allowing ssh login from our local IP address:
 ```bash
@@ -13,14 +14,9 @@ sudo ufw default allow outgoing
 sudo ufw allow from <YOUR_LOCAL_IP> to any port 22
 sudo ufw enable
 ```
-Another configuration that should be implement in the context of SSH is Disable root login over SSH: 
-Edit `/etc/ssh/sshd_config` and set `PermitRootLogin no`. By doing this, you are preventing
-unathorized access to your system from the root account and minimizing the risk of malicious attacks.
 
-
-### 2.0 Use Fail2Ban to Prevent SSH Brute-Force Attacks
+### 3.0 Use Fail2Ban to Prevent SSH Brute-Force Attacks
 Here is how to set up Fail2Ban in Debian-based systems.
-
 1. Install Fail2Ban
 ```bash
 sudo apt install fail2ban
@@ -40,7 +36,7 @@ sudo systemctl start  fail2ban
 sudo systemctl enable fail2ban
 ```
 
-### 3.0 Use Logging and Monitoring
+### 4.0 Use Logging and Monitoring
 Regularly monitor and log SSH activity on the system and be in the alert zone for unusual activities.
 
 1. How to Enable SSH Logging: In /etc/ssh/sshd_config, set:
