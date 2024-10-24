@@ -47,4 +47,4 @@ ServerTokens Prod
 
 ### Conclusion
 These are just some basics approach to Apache2 security. There are still a plethora of security issues 
-for Apache2 and other tools as well. Expect more to come
+for Apache2 and other tools as well. Expect more to come.
