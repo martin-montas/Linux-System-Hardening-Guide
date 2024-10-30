@@ -3,7 +3,7 @@ This repository contains security and best practices for Apache2 and other Apach
 related tools.
 
 #### Prequisites
-- Apache2 should be installed.
+- Apache2 should be installed on your system.
 - you should have a basic understanding of Apache2 and its commands.
 
 ### 1.0 Disable Unwanted Services
@@ -34,17 +34,17 @@ a2enmod log_config
 ### 3.0 Hide Version and OS Details from HTTP Headers
 Hiding the version and OS details from HTTP headers keeps unwanted eyes from enumarating the system
 and the web server. 
-1. Open the config file:
-```bash
-sudo systemctl restart apache2  # For Ubuntu/Debian
-sudo systemctl restart httpd    # For CentOS/Red Hat
-```
-2. Edit/add the following lines in the config file:
+1. Edit/add the following lines in the config file:
 ```bash
 ServerSignature Off
 ServerTokens Prod
 ```
+2. Open the config file:
+```bash
+sudo systemctl restart apache2  # For Ubuntu/Debian
+sudo systemctl restart httpd    # For CentOS/Red Hat
+```
 
 ### Conclusion
-These are just some basics approach to Apache2 security. There are still a plethora of security issues 
-for Apache2 and other tools as well. Expect more to come.
+These are just some of the basics for Apache2 security. There are still a plethora of security configurations
+for Apache2 and other tools as well.
