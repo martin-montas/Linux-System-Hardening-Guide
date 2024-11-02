@@ -3,11 +3,11 @@
 
 ## Installation 
 
-1. Installing the modsecurity package on a Debian based system:
+1. Installing the mod security package on a Debian based system:
 ```bash
 sudo apt install libapache2-mod-security2 -y
 ```
-2. After installing the modsecurity package, enable the modsecurity modul
+2. After installing the mod security package, enable the mods security module
 ```bash
 sudo a2enmod headers
 ```
@@ -17,18 +17,18 @@ sudo systemctl restart apache2
 ```
 
 ## Configuration
-1. using a modsecurity configuration file
+1. Using a mod security configuration file
 ```bash
 sudo cp /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf
 ```
 
-## Setting up OWASP ModSecurity Core Rule Set
-the OWASP ModSecurity Core Rule Set is available at https://github.com/SpiderLabs/owasp-modsecurity-crs
-it can when enabled provide protecti on againt common vulnerabilities in web applications.
+## Setting up OWASP mod security Core Rule Set
+The OWASP mod security Core Rule Set is available at https://github.com/SpiderLabs/owasp-modsecurity-crs
+it can when enabled provide protection on against common vulnerabilities in web applications.
 
 To Begin, run the following commands:
 
-1. Delete the default rules that come with ModSecurity by default
+1. Delete the default rules that come with mod security by default
 ```bash
 sudo rm -rf /usr/share/modsecurity-crs
 ```
@@ -71,15 +71,12 @@ SecRuleEngine On
 </IfModule>
 ```
 
-and you will be all set with  the OWASP ModSecurity Core Rule Set.
+and you will be all set with the OWASP mod security Core Rule Set.
 
 
 ## Conclusion
-Congratulations, you have successfully installed and configured ModSecurity for Apache2.
+Congratulations, you have successfully installed and configured mod security for Apache2.
 
 
 ## References
 https://www.youtube.com/watch?v=MB7nQrlP5Yc&t=6s
-
-
-

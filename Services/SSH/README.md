@@ -2,12 +2,12 @@
 
 ### 1.0 Setting No Root Login Over SSH
 Edit `/etc/ssh/sshd_config` and set `PermitRootLogin no`.
-By doing this, you are preventing unathorized access to your system from the root account and 
+By doing this, you are preventing una
 minimizing the risk of malicious attacks.
 
 ### 2.0 Allowing Secure Shell From our System  
-We will be using `ufw` firewall to allow access to our system. The following command denying all incoming 
-connections, allowing all outgoing connections, and allowing ssh login from our local IP address:
+We will be using `ufw` firewall to allow access to our system. The following command den
+connections, allowing all outgoing connections, and allowing ssh login from our local IP
 ```bash
 sudo ufw default deny incoming
 sudo ufw default allow outgoing

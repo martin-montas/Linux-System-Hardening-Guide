@@ -11,7 +11,7 @@ want to be sure, run the following:
 tune2fs -l /dev/sdaX | grep 'Default mount options'
 ```
 Replace `/dev/sdaX` with the appropriate device.
-if you see `acl` in the output, then you are good to go.
+If you see `acl` in the output, then you are good to go.
 
 If you don't see anything in the output, then you need to enable ACLs by 
 executing the following command:
@@ -34,7 +34,7 @@ You can also use ACLs for groups. The following sets the ACLs for the
 sudo setfacl -m g:admin_group:rwx /var
 ```
 
-### 4.0  Viewing ACLs
+### 4.0 Viewing ACLs
 Once you have set ACLs, you can view them by using the `getfacl` command:
 ```bash
 getfacl /etc

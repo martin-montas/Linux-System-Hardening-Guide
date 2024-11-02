@@ -2,9 +2,9 @@
 This repository contains security and best practices for Apache2 and other Apache2 
 related tools.
 
-#### Prequisites
+#### Prerequisites
 - Apache2 should be installed on your system.
-- you should have a basic understanding of Apache2 and its commands.
+- Have a basic understanding of Apache2 and its commands.
 
 ### 1.0 Disable Unwanted Services
 All web servers should only be used as a web server. Disabling unwanted services reduces 
