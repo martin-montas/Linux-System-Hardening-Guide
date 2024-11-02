@@ -32,7 +32,7 @@ a2enmod log_config
 ```
 
 ### 3.0 Hide Version and OS Details from HTTP Headers
-Hiding the version and OS details from HTTP headers keeps unwanted eyes from enumarating the system
+Hiding the version and OS details from HTTP headers keeps unwanted eyes from enumerating the system
 and the web server. 
 1. Edit/add the following lines in the config file:
 ```bash
